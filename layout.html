@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive layout demonstration utilizing CSS Flexbox and CSS Grid. Built for Web Development Internship Task 2.">
+    <title>Responsive Layout Demo | Flexbox & CSS Grid</title>
+    
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+    <!-- Navigation Bar: Built using CSS Flexbox -->
+    <nav class="flex-navbar">
+        <div class="navbar-brand">FlexGrid Demo</div>
+        
+        <!-- Toggle button for mobile navigation menu -->
+        <button class="navbar-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="navbar-links" id="navbar-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="index.html">Main Site</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Area: Built using CSS Grid -->
+    <main class="grid-container">
+        
+        <!-- Header Banner Section -->
+        <header class="grid-header">
+            <h1>Responsive Layout Demo</h1>
+            <p>Demonstrating Flexbox navigation combined with CSS Grid content layout.</p>
+        </header>
+
+        <!-- Sidebar Navigation/Panel -->
+        <aside class="grid-sidebar">
+            <h3>Layout Controls</h3>
+            <p>Resize your browser window to observe how the grids and columns shift.</p>
+            <div class="status-tags">
+                <span class="tag tag-flex">Flexbox Nav</span>
+                <span class="tag tag-grid">CSS Grid Core</span>
+                <span class="tag tag-media">Media Queries</span>
+            </div>
+        </aside>
+
+        <!-- Main Feature Article -->
+        <article class="grid-main-feature">
+            <h2>CSS Grid & Flexbox Power</h2>
+            <p>
+                Modern CSS layout models make responsive web designs intuitive and clean. By using Flexbox for one-dimensional layouts (like navbars or lists) and CSS Grid for two-dimensional structures (like page layouts and card grids), you get the best of both worlds.
+            </p>
+            <p>
+                In this demo page, the header navigation bar aligns items horizontally with flex properties, while the page structure below forms a grid structure that adapts automatically from multi-column desktop views down to linear vertical stacks on mobile.
+            </p>
+        </article>
+
+        <!-- Dynamic Card 1 -->
+        <section class="grid-card card-cyan">
+            <div class="card-icon">⚡</div>
+            <h3>Grid Column 1</h3>
+            <p>Automatically repositions itself based on screen width using grid properties.</p>
+        </section>
+
+        <!-- Dynamic Card 2 -->
+        <section class="grid-card card-indigo">
+            <div class="card-icon">📱</div>
+            <h3>Grid Column 2</h3>
+            <p>Stretches and shrinks dynamically, ensuring spacing stays clean.</p>
+        </section>
+
+        <!-- Dynamic Card 3 -->
+        <section class="grid-card card-purple">
+            <div class="card-icon">🎨</div>
+            <h3>Grid Column 3</h3>
+            <p>Supports media queries to modify its order, spanning, or sizing.</p>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="layout-footer">
+        <p>&copy; 2026 Priyanshu Jaiswal. Web Development Internship.</p>
+    </footer>
+
+    <!-- Simple JS to toggle navbar on mobile -->
+    <script>
+        const toggleBtn = document.getElementById('mobile-menu-toggle');
+        const navLinks = document.getElementById('navbar-links');
+        
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            toggleBtn.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

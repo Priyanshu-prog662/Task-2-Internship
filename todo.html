@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dynamic To-Do list app using vanilla HTML, CSS, and Javascript. Built for Web Development Internship Task 2.">
+    <title>Inter-Active To-Do List</title>
+    
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="todo-app-container">
+        
+        <!-- App Header -->
+        <header class="todo-header">
+            <a href="index.html" class="back-link">&larr; Main Site</a>
+            <h1>Task Tracker</h1>
+            <p>Keep organized and manage your day-to-day tasks dynamically.</p>
+        </header>
+
+        <!-- Input and Add Controls -->
+        <div class="todo-input-section">
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="What needs to be done today?" autocomplete="off">
+                <button type="submit" id="add-task-btn">Add Task</button>
+            </form>
+            <span class="input-error" id="input-error">Please enter a task name!</span>
+        </div>
+
+        <!-- Task List Container -->
+        <div class="todo-list-section">
+            <!-- Empty state illustration container -->
+            <div class="empty-state" id="empty-state">
+                <div class="empty-icon">📝</div>
+                <p>All caught up! There are no tasks on your plate.</p>
+            </div>
+            
+            <ul class="todo-list" id="todo-list">
+                <!-- Task list items will be generated here dynamically by javascript -->
+            </ul>
+        </div>
+
+        <!-- Task Summary Footer (Inline Stats) -->
+        <div class="todo-summary" id="todo-summary" style="display: none;">
+            <p><span id="task-count">0</span> active tasks pending</p>
+            <button class="clear-all-btn" id="clear-all-btn">Clear All</button>
+        </div>
+
+    </div>
+
+    <!-- Script File Linking -->
+    <script src="todo.js"></script>
+</body>
+</html>

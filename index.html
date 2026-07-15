@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal introduction and portfolio webpage for Priyanshu Jaiswal. Built for Web Development Internship Task 1.">
+    <title>Priyanshu Jaiswal | Personal Webpage</title>
+    
+    <!-- Google Fonts: Outfit (headings) and Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="logo">PJ</div>
+        <nav class="nav-menu">
+            <a href="#about" class="nav-link" id="nav-about">About</a>
+            <a href="#projects" class="nav-link" id="nav-projects">Projects</a>
+            <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Section -->
+        <section id="about" class="intro-section">
+            <div class="card">
+                <!-- Avatar image container -->
+                <div class="avatar-container">
+                    <img src="profile.png" alt="Priyanshu Jaiswal Profile Picture" class="avatar-img" id="avatar-img">
+                </div>
+                
+                <!-- Text contents -->
+                <div class="intro-text">
+                    <h1 class="main-heading">Hello, I'm <span class="highlight">Priyanshu Jaiswal</span></h1>
+                    <p class="paragraph">
+                        Welcome to my page! I am a passionate aspiring web developer currently embarking on a 45-day Web Development internship. My goal is to build beautiful, interactive, and user-friendly web applications starting from the core foundations of HTML, CSS, and modern vanilla JavaScript.
+                    </p>
+                    <p class="paragraph">
+                        I love solving complex problems, writing clean code, and exploring new design trends. Through this internship, I aim to master frontend techniques, learn to create responsive and modern interfaces, and deploy real-world web solutions.
+                    </p>
+                    
+                    <!-- Call to Action button -->
+                    <button class="cta-btn" id="greet-btn">Say Hello</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="card contact-card">
+                <h2 class="section-heading">Get in Touch</h2>
+                <p class="section-subheading">Have a question or want to work together? Drop a message!</p>
+                
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="form-name" class="form-label">Name</label>
+                        <input type="text" id="form-name" class="form-input" placeholder="Your Name" required autocomplete="name">
+                        <span class="error-msg" id="name-error">Name is required</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-email" class="form-label">Email</label>
+                        <input type="email" id="form-email" class="form-input" placeholder="your.email@example.com" required autocomplete="email">
+                        <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-message" class="form-label">Message</label>
+                        <textarea id="form-message" class="form-input form-textarea" rows="5" placeholder="Write your message here..." required></textarea>
+                        <span class="error-msg" id="message-error">Message cannot be empty</span>
+                    </div>
+
+                    <!-- Inline Success Alert -->
+                    <div class="success-alert" id="success-alert">
+                        Message sent successfully! Thank you for reaching out.
+                    </div>
+                    
+                    <button type="submit" class="cta-btn submit-btn" id="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Priyanshu Jaiswal. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
